@@ -1,6 +1,8 @@
-# Step 1
+# Terraform configuration
 
-`main.tf` {{open}}
+We start by creating a Terraform configuration file - `main.tf`{{open}}
+
+And add a provider for Microsoft Azure
 
 <pre class="file" data-filename="main.tf" data-target="copy">
 provider "azurerm" {

@@ -44,6 +44,7 @@
   "environment": {
     "uieditorpath": "/root/deploy-azure-function/tf_config",
     "showide": true,
+    "idePort": 23000,
     "uilayout": "terminal"
   },
   "files": [
