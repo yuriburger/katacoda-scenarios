@@ -2,7 +2,7 @@ Terraform allows us to declare an infrastructure in a cloud-agnostic way. This m
 
 # Setup
 
-We start by creating a Terraform configuration file - `main.tf`{{open}}
+We start by creating a Terraform configuration file. Switch to your IDE tab - `main.tf`{{open}}
 
 And add a provider for Microsoft Azure:
 
