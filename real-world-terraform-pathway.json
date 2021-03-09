@@ -1,0 +1,11 @@
+{
+  "title": "Terraform: First steps beyond the Hello World!",
+  "description": "Learn how to control your infrastructure with these real-world Terraform scenarios",
+  "courses": [
+    {
+      "course_id": "deploy-azure-function",
+      "title": "Deploy an Azure Function with Terraform",
+      "description": "Learn how to deploy an Azure Function with Terraform"
+    }
+  ]
+}
