@@ -9,9 +9,6 @@ sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(l
 echo "Install Azure CLI"
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-echo "Install Terraform CLI"
+echo "Install Terraform and Azure Functions CLI"
 sudo apt-get update
-sudo apt-get install terraform
-
-echo "Install Azure Functions CLI"
-sudo apt-get install azure-functions-core-tools-3
+sudo apt-get install terraform azure-functions-core-tools-3

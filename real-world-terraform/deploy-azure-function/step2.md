@@ -11,8 +11,8 @@ And initialize a simple function we can use as a skeleton project for more advan
 ```
 func init --worker-runtime typescript
 func new --language typescript --template "HTTP trigger" -n "hello_world_http"
-cd ..
 npm install
+cd ..
 ```
 
 Now that our function is ready, we can add it to our Terraform script in the next step.
