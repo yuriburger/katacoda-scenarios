@@ -1,4 +1,4 @@
-First thing we need to do, is login to the Azure Demo account (you will need enough permissions to create resources).
+Switch back to your Terminal tab. Next thing we need to do, is login to the Azure Demo account (you will need enough permissions to create resources).
 
 ```
 az login

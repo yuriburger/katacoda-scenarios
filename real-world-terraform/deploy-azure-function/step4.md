@@ -4,7 +4,7 @@ The ZIP file we created from our function needs to be uploaded. Terraform can co
 resource "azurerm_storage_blob" "appcode" {
   name = "functionapp.zip"
   storage_account_name = azurerm_storage_account.sa.name
-  storage_container_name = azurerm_storage_container.deployments.name
+  storage_container_name = azurerm_storage_container.sc.name
   type = "Block"
   source = data.archive_file.init.output_path
 }
@@ -14,7 +14,7 @@ Our Azure Storage Account is ofcourse not writable by the world, we need to prov
 
 <pre class="file" data-filename="main.tf" data-target="append">
 data "azurerm_storage_account_sas" "sasfunc" {
-  connection_string = "${azurerm_storage_account.sa.primary_connection_string}"
+  connection_string = ${azurerm_storage_account.sa.primary_connection_string}
   https_only = true
   start = "2020-01-01"
   expiry = "2021-12-31"
