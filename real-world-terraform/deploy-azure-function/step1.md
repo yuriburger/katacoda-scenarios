@@ -2,14 +2,14 @@ Terraform allows us to declare an infrastructure in a cloud-agnostic way. This m
 
 # Setup
 
-We start by creating a Terraform configuration file. Switch to your IDE tab - `main.tf`{{open}}
+We start by creating a Terraform configuration file. Switch to your IDE tab and create a new file "main.tf" or click this link: `main.tf`{{open}}
 
-And add a provider for Microsoft Azure:
+The very first thing we do is.... add a provider for Microsoft Azure:
 
 <pre class="file" data-filename="main.tf" data-target="copy">
 provider "azurerm" {
- version = "=2.18.0"
- features {}
+  version = "=2.18.0"
+  features {}
 }
 </pre>
 
@@ -17,16 +17,16 @@ Since our function needs to be packed before uploading, we add a ZIP provider to
 
 <pre class="file" data-filename="main.tf" data-target="append">
 provider "archive" {
- version = "~> 1.3"
+  version = "~> 1.3"
 }
 </pre>
 
-Azure uses Resource Groups to group our components, so we need to add a Terraform resource for that:
+Azure uses Resource Groups to group our components, so we also add a Terraform resource for that:
 
 <pre class="file" data-filename="main.tf" data-target="append">
 resource "azurerm_resource_group" "rg" {
- name = "terraform"
- location = "West Europe"
+  name = "terraform"
+  location = "West Europe"
 }
 </pre>
 
