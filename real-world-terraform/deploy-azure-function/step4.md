@@ -14,7 +14,7 @@ Our Azure Storage Account is ofcourse not writable by the world, we need to prov
 
 <pre class="file" data-filename="main.tf" data-target="append">
 data "azurerm_storage_account_sas" "sasfunc" {
-  connection_string = ${azurerm_storage_account.sa.primary_connection_string}
+  connection_string = azurerm_storage_account.sa.primary_connection_string
   https_only = true
   start = "2020-01-01"
   expiry = "2021-12-31"

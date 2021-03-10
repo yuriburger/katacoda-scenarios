@@ -12,6 +12,7 @@ And initialize a simple function we can use as a skeleton project for more advan
 func init --worker-runtime typescript
 func new --language typescript --template "HTTP trigger" -n "hello_world_http"
 npm install
+npm run build
 cd ..
 ```{{execute}}
 
