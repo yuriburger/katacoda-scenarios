@@ -2,7 +2,7 @@ Azure uses Service Plans to host our Azure Function. Let's also add this to the 
 
 <pre class="file" data-filename="main.tf" data-target="append">
 resource "azurerm_app_service_plan" "appsp" {
-  name = ${azurerm_resource_group.rg.name}funcappsp"
+  name = "${azurerm_resource_group.rg.name}funcappsp"
   location = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   kind = "FunctionApp"
@@ -31,7 +31,7 @@ resource "azurerm_function_app" "fa" {
     FUNCTIONS_WORKER_RUNTIME = "node"
     WEBSITE_NODE_DEFAULT_VERSION = "~10"
     FUNCTION_APP_EDIT_MODE = "readonly"
-    HASH = "${base64encode(filesha256(data.archive_file.init.output_path))}"
+    HASH = base64encode(filesha256(data.archive_file.init.output_path))
     WEBSITE_RUN_FROM_PACKAGE = "https://${azurerm_storage_account.sa.name}.blob.core.windows.net/${azurerm_storage_container.sc.name}/${azurerm_storage_blob.appcode.name}${data.azurerm_storage_account_sas.sasfunc.sas}"
   }
   identity {

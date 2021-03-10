@@ -1,6 +1,6 @@
 We need a bit of Azure storage to be able to upload and deploy our function. Storage in Azure works by creating a Storage Account and a Storage Container.
 
-Switch to the IDE tab and add the following to our Terraform file to create the Storage Account:
+Switch back to the IDE tab and add the following to our Terraform file to create the Storage Account:
 
 <pre class="file" data-filename="main.tf" data-target="append">
 resource "azurerm_storage_account" "sa" {
