@@ -1,1 +1,0 @@
-In this scenario you'll learn how to create an Azure Function using Terraform. It will explain how to create, plan and apply a controlled configuration that creates a working Azure Function using Infrastructure as Code.
